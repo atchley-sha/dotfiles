@@ -14,4 +14,6 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-export PATH="$PATH:/private/etc/osmosis-0.48.3/bin"
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/hayden/.sdkman"
+[[ -s "/home/hayden/.sdkman/bin/sdkman-init.sh" ]] && source "/home/hayden/.sdkman/bin/sdkman-init.sh"
