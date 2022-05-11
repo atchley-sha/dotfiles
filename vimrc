@@ -12,7 +12,7 @@ autocmd BufNewFile * startinsert
 set encoding=utf-8
 
 " Set xterm options for cursor
-if &term =~ 'xterm'
+if &term == 'xterm'
 		" enter vim
 		autocmd VimEnter * silent !echo -ne "\e[1 q\<Esc>]12;green\x7"
 		" otherwise
