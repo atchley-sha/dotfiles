@@ -1,5 +1,5 @@
-#source custom bash commands
-source ~/dotfiles/custom_bash_commands
+#source custom bash commands and aliases
+source ~/dotfiles/bash_commands
 
 
 # !! Contents within this block are managed by 'conda init' !!
