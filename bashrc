@@ -1,5 +1,5 @@
-
-# >>> conda initialize >>>
+#source custom bash commands
+source ~/dotfiles/custom_bash_commands
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/apps/miniconda3/latest/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
