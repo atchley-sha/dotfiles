@@ -1,3 +1,4 @@
 #add custom bash commands to be sourced in bashrc
 
+#better queue view on BYU supercomputer
 alias sq='squeue --format="%.18i %.9P %.30j %.8u %.8T %.10M %.9l %.6D %R" --me'
