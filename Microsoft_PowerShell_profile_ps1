@@ -1,0 +1,4 @@
+#PowerShell 7 profile
+
+#Load custom commands
+. ~/dotfiles/custom_ps_scripts.ps1
