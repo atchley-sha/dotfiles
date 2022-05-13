@@ -11,3 +11,5 @@ export PS1="\[\033[38;5;11m\]\u\[$(tput sgr0)\]@\h:\[$(tput sgr0)\]\[\033[38;5;5
 alias ls='ls --color=auto'
 alias ll='ls -oh'
 
+#trim long paths in prompt
+export PROMPT_DIRTRIM=3
