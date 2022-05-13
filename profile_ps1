@@ -4,11 +4,23 @@
 (& "C:\Users\shayd\miniconda3\Scripts\conda.exe" "shell.powershell" "hook") | Out-String | Invoke-Expression
 #endregion
 
-#function prompt {"$(Get-LocalUser)`@$(env:COMPUTERNAME):[$(Get-Location)]`$ "}
+# Custom prompt
 function prompt {
 	Write-Host ("$env:UserName") -NoNewLine -ForegroundColor Yellow
 	Write-Host ("@$env:ComputerName`:") -NoNewLine
 	Write-Host ("[$(Get-Location)]") -NoNewLine -ForegroundColor Cyan
 	Write-Host ("`>") -NoNewLine -ForegroundColor Green
 	return " "
+}
+
+# Up function
+function up {
+	param ($n)
+
+	$P=$(Get-Location)
+
+	for ($i = 1; $i -le $n; $i++) {
+		$P = -join($P, "`\..")
 	}
+	cd $P
+}
