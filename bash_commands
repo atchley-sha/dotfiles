@@ -2,3 +2,7 @@
 
 #better queue view on BYU supercomputer
 alias sq='squeue --format="%.18i %.9P %.30j %.8u %.8T %.10M %.9l %.6D %R" --me'
+
+#create BEAM jar and move to convenient directory
+alias beamjar='cd ~/BEAM && gradle shadowjar && \
+	cp ~/BEAM/build/libs/beam.sim.Run.Beam.jar ~/beam_scenarios/beam.jar'
