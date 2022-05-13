@@ -2,7 +2,7 @@
 
 #create BEAM jar and move to convenient directory
 alias beamjar='cd ~/BEAM && gradle shadowjar && \
-	  cp ~/BEAM/build/libs/beam.sim.Run.Beam.jar ~/beam_scenarios/beam.jar'
+	  cp ~/BEAM/build/libs/beam.sim.RunBeam.jar ~/beam_scenarios/beam.jar'
 
 
 #function for moving up
