@@ -9,6 +9,6 @@ function prompt {
 	Write-Host ("$env:UserName") -NoNewLine -ForegroundColor Yellow
 	Write-Host ("@$env:ComputerName`:") -NoNewLine
 	Write-Host ("[$(Get-Location)]") -NoNewLine -ForegroundColor Cyan
-	Write-Host ("`$") -NoNewLine -ForegroundColor Green
+	Write-Host ("`>") -NoNewLine -ForegroundColor Green
 	return " "
 	}
