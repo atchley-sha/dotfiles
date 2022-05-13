@@ -45,9 +45,6 @@ set number
 set ruler
 set laststatus=2 "Always show status line
 
-set cursorline
-highlight CursorLine cterm=NONE ctermbg=0
-
 set linebreak
 set nowrap
 set tabstop=4
@@ -68,7 +65,8 @@ set wildmode=longest:full,full
 set incsearch "Highlight search as it's typed
 set hlsearch
 nnoremap <C-L> :noh<CR><C-L>
-"clears serach highlighting until next serach operation
+	"clears serach highlighting until next serach operation
+
 "Clears search highlighting upon exiting command mode (incl. via a movement)
 "augroup vimrc-incsearch-highlight
 "	autocmd!
