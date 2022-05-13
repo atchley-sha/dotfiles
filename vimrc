@@ -49,13 +49,6 @@ set wildmode=longest:full,full
 set incsearch "Highlight search as it's typed
 set hlsearch
 nnoremap <C-L> :noh<CR><C-L>
-	"clears serach highlighting until next serach operation
-
-"Clears search highlighting upon exiting command mode (incl. via a movement)
-"augroup vimrc-incsearch-highlight
-"	autocmd!
-"	autocmd CmdlineEnter /,\? :set hlsearch
-"	autocmd CmdlineLeave /,\? :set nohlsearch
-"augroup END
+	"^L clears serach highlighting until next serach operation
 
 set visualbell t_vb=
