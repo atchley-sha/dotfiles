@@ -11,6 +11,9 @@ autocmd BufNewFile * startinsert
 		"Starts in insert mode if file is new
 set encoding=utf-8
 
+" Options for vim-notes plugin
+:let g:notes_directories = ['~/dotfiles/vim/notes']
+
 " Highlighting colors for character types
 highlight SpecialKey ctermfg=8
 highlight NonText ctermfg=8
