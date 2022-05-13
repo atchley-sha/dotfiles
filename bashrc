@@ -1,6 +1,8 @@
 #source custom bash commands and aliases
 source ~/dotfiles/bash_commands
 
+#source local bash stuff
+[[ -f ~/.bash_local ]] && source .bash_local
 
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/apps/miniconda3/latest/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
