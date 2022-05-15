@@ -11,23 +11,22 @@ autocmd BufNewFile * startinsert
 		"Starts in insert mode if file is new
 set encoding=utf-8
 
-" Change : and ;
-noremap : ;
-noremap : ;
 
 " Options for vim-notes plugin
-:let g:notes_directories = ['~/dotfiles/vim/notes']
+let g:notes_directories = ['~/dotfiles/vim/notes']
 
 " Fix conflict between nerdtree and vim-signature
 let g:NERDTreeMapMenu='M'
 
 " Make nerdtree command simpler
-noremap NT NERDTree
+command NT NERDTree
+
 
 " Highlighting colors for character types
 highlight SpecialKey ctermfg=8
 highlight NonText ctermfg=8
 highlight MatchParen ctermbg=8
+
 
 " Set visual/formatting options
 set title
