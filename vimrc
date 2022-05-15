@@ -14,6 +14,9 @@ set encoding=utf-8
 " Options for vim-notes plugin
 :let g:notes_directories = ['~/dotfiles/vim/notes']
 
+" Fix conflict between verdtree and vim-signature
+let g:NERDTreeMapMenu='M'
+
 " Highlighting colors for character types
 highlight SpecialKey ctermfg=8
 highlight NonText ctermfg=8
