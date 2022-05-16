@@ -16,3 +16,11 @@
 	helper = store
 [push]
 	default = simple
+[color]
+	ui = true
+[color "status"]
+	header = normal normal dim
+	branch = white normal bold
+	added = green
+	changed = yellow
+	untracked = yellow
