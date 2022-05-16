@@ -1,19 +1,31 @@
+#source local zsh stuff
+[[ -f ~/.zsh_local ]] && source ~/.zsh_local
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/haydenatchley/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/haydenatchley/opt/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/haydenatchley/opt/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/haydenatchley/opt/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
+autoload -U compinit
+compinit
 
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/home/hayden/.sdkman"
-[[ -s "/home/hayden/.sdkman/bin/sdkman-init.sh" ]] && source "/home/hayden/.sdkman/bin/sdkman-init.sh"
+#allow tab completion in the middle of a word
+setopt COMPLETE_IN_WORD
+
+## keep background processes at full speed
+#setopt NOBGNICE
+## restart running processes on exit
+#setopt HUP
+
+## history
+#setopt APPEND_HISTORY
+## for sharing history between zsh processes
+#setopt INC_APPEND_HISTORY
+#setopt SHARE_HISTORY
+
+## never ever beep ever
+setopt NO_BEEP
+
+## automatically decide when to page a list of completions
+#LISTMAX=0
+
+## disable mail checking
+#MAILCHECK=0
+
+# autoload -U colors
+#colors
