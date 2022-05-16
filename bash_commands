@@ -1,8 +1,9 @@
 #Add custom bash commands to be sourced in bashrc
 
 #create BEAM jar and move to convenient directory
-alias beamjar='cd ~/BEAM && gradle shadowjar && \
-	  cp ~/BEAM/build/libs/beam.sim.RunBeam.jar ~/beam_scenarios/beam.jar'
+## must be run from in beam directory and have BEAM and beam_scenarios in same directory
+alias beamjar='gradle shadowjar && [[ -d ../beam_scenarios ]] && \
+	  cp ./build/libs/beam.sim.RunBeam.jar ../beam_scenarios/beam.jar'
 
 
 #function for moving up
