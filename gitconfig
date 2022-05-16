@@ -24,3 +24,4 @@
 	added = green
 	changed = yellow
 	untracked = yellow
+	unmerged = red
