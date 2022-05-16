@@ -10,7 +10,7 @@ export PS1="\[\033[38;5;11m\]\u\[$(tput sgr0)\]@\h:\[$(tput sgr0)\]\[\033[38;5;5
 #ls aliases
 alias ls='ls --color=auto'
 alias ll='ls -oh'
-alias la='ll -a'
+alias la='ll -A'
 
 #grep auto-color
 alias grep='grep --color=auto'
