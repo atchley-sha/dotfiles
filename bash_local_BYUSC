@@ -15,9 +15,9 @@ export LIBRARY_PATH=$LIBRARY_PATH:/zhome/satchley/usr/lib
 export LD_LIBRARY_PATH=LD_LIBRARY_PATH:/zhome/satchley/usr/lib
 
 
-#better queue view on BYU supercomputer
-alias sq='squeue --format="%.12i | %.15j | %.10T | %.20S | %.10M | %.10l | %.12u | %.4C | %.10m | %R" --me'
-
+#better queue and sacct view
+alias sq='squeue --format="%.12i | %.15j | %.20T | %.20S | %.10M | %.10l | %.12u | %.4C | %.10m | %R" --me'
+alias sa='sacct -X -o JobID%12,JobName%15,State%20,Start%20,Elapsed%12,TimeLimit%12,User%12,NCPUs%5,ReqMem%10,TotalCPU%12,CPUTime%12'
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
