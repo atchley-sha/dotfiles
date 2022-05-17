@@ -19,7 +19,7 @@
 [color]
 	ui = true
 [color "status"]
-	header = normal normal dim
+	header = magenta
 	branch = white normal bold
 	added = green
 	changed = yellow
