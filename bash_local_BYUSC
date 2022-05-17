@@ -1,0 +1,41 @@
+#Local additions to bashrc not to share
+
+#locale settings
+export LC_ALL="en_US.UTF-8"
+export LANG="en_US.UTF-8"
+
+#PATH additions
+export PATH=~/usr/bin:$PATH
+export PATH=$PATH:~/usr/gradle-7.4.2/bin
+export PATH=$PATH:~/.local/bin
+
+#various environment variables
+export CPPFLAGS='-I/zhome/satchley/usr/include'
+export LIBRARY_PATH=$LIBRARY_PATH:/zhome/satchley/usr/lib
+export LD_LIBRARY_PATH=LD_LIBRARY_PATH:/zhome/satchley/usr/lib
+
+
+#better queue view on BYU supercomputer
+alias sq='squeue --format="%.12i | %.15j | %.10T | %.20S | %.10M | %.10l | %.12u | %.4C | %.10m | %R" --me'
+
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/apps/miniconda3/latest/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/apps/miniconda3/latest/etc/profile.d/conda.sh" ]; then
+        . "/apps/miniconda3/latest/etc/profile.d/conda.sh"
+    else
+        export PATH="/apps/miniconda3/latest/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+#for conda to work on compute nodes
+export -f conda
+export -f __conda_activate
+export -f __conda_reactivate
+export -f __conda_hashr
