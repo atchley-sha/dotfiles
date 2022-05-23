@@ -2,7 +2,7 @@
 source ~/dotfiles/bash_commands
 
 #source local bash stuff
-[[ -f ~/.bash_local ]] && source .bash_local
+[[ -f ~/.bash_local ]] && source ~/.bash_local
 
 #set PS1 prompt options
 export PS1="\[\033[38;5;11m\]\u\[$(tput sgr0)\]@\h:\[$(tput sgr0)\]\[\033[38;5;51m\][\w]\[$(tput sgr0)\]\[\033[38;5;46m\]\\$\[$(tput sgr0)\] \[$(tput sgr0)\]"
