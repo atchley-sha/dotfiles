@@ -5,9 +5,7 @@ export LC_ALL="en_US.UTF-8"
 export LANG="en_US.UTF-8"
 
 #PATH additions
-export PATH=~/usr/bin:$PATH
 export PATH=$PATH:~/usr/gradle-7.4.2/bin
-export PATH=$PATH:~/.local/bin
 
 #various environment variables
 export CPPFLAGS='-I/zhome/satchley/usr/include'
