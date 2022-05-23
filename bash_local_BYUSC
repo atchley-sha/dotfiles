@@ -7,12 +7,6 @@ export LANG="en_US.UTF-8"
 #PATH additions
 export PATH=$PATH:~/usr/gradle-7.4.2/bin
 
-#various environment variables
-export CPPFLAGS='-I/zhome/satchley/usr/include'
-export LIBRARY_PATH=$LIBRARY_PATH:/zhome/satchley/usr/lib
-export LD_LIBRARY_PATH=LD_LIBRARY_PATH:/zhome/satchley/usr/lib
-
-
 #better queue and sacct view
 alias sq='squeue --format="%.16i | %.15j | %.20T | %.20S | %.10M | %.10l | %.12u | %.4C | %.10m | %R" --me'
 alias sa='sacct -X -o JobID%16,JobName%15,State%20,Start%20,Elapsed%12,TimeLimit%12,User%12,NCPUs%5,ReqMem%10'
