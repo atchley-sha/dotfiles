@@ -8,7 +8,7 @@ source ~/dotfiles/bash_commands
 export PS1="\[\033[38;5;11m\]\u\[$(tput sgr0)\]@\h:\[$(tput sgr0)\]\[\033[38;5;51m\][\w]\[$(tput sgr0)\]\[\033[38;5;46m\]\\$\[$(tput sgr0)\] \[$(tput sgr0)\]"
 
 #ls aliases
-alias ls='ls --color=auto'
+alias ls='ls --color=always'
 alias ll='ls -oh'
 alias la='ll -A'
 
