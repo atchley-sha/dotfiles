@@ -13,7 +13,7 @@ alias ll='ls -oh'
 alias la='ll -A'
 
 #grep auto-color
-alias grep='grep --color=auto'
+alias grep='grep --color=always'
 
 #less defaults nowrap and line number
 alias less='less -SN'
