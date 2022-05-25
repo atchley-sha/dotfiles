@@ -19,3 +19,6 @@
 [submodule "vim/bundle/vim-signature"]
 	path = vim/bundle/vim-signature
 	url = https://github.com/kshenoy/vim-signature
+[submodule "vim/bundle/kerbovim"]
+	path = vim/bundle/kerbovim
+	url = https://github.com/Freedzone/kerbovim
