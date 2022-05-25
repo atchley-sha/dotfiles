@@ -6,7 +6,7 @@ autocmd VimEnter * Helptags "Loads pathogen help tags
 " Misc loading options
 set sessionoptions-=options
 syntax enable
-"filetype plugin indent on
+filetype plugin indent on
 autocmd BufNewFile * startinsert
 		"Starts in insert mode if file is new
 set encoding=utf-8
@@ -51,6 +51,11 @@ set confirm "for operations (e.g. :q when unsaved) that need confirmation
 set smartindent "after { and keywords ('cinwords')
 set shiftwidth=4
 set smarttab
+
+" change vertical to horizontal with -
+noremap <c-w>- <c-w>t<c-w>K
+" change horizontal to vertical with |
+noremap <c-w>\| <c-w>t<c-w>H
 
 set wildmenu "for command completion
 set wildmode=longest:full,full
