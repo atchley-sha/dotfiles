@@ -51,6 +51,7 @@ set confirm "for operations (e.g. :q when unsaved) that need confirmation
 set smartindent "after { and keywords ('cinwords')
 set shiftwidth=4
 set smarttab
+set noexpandtab
 
 " change vertical to horizontal with -
 noremap <c-w>- <c-w>t<c-w>K
