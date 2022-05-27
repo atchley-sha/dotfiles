@@ -29,6 +29,7 @@ highlight MatchParen ctermbg=8
 
 
 " Set visual/formatting options
+set termguicolors
 set title
 set number
 set ruler
