@@ -5,12 +5,12 @@ autocmd VimEnter * Helptags "Loads pathogen help tags
 
 " Misc loading options
 set sessionoptions-=options
+
 syntax enable
 filetype plugin indent on
 autocmd BufNewFile * startinsert
 		"Starts in insert mode if file is new
 set encoding=utf-8
-
 
 " Options for vim-notes plugin
 let g:notes_directories = ['~/dotfiles/vim/notes']
@@ -20,7 +20,6 @@ let g:NERDTreeMapMenu='M'
 
 " Make nerdtree command simpler
 command NT NERDTree
-
 
 " Highlighting colors for character types
 highlight SpecialKey ctermfg=8
@@ -45,9 +44,10 @@ highlight Cursorline cterm=NONE ctermbg=0
 set list
 set listchars=tab:\⋮\ ,eol:⏎,trail:␠,extends:▶,precedes:◀,nbsp:⎵
 
-set scrolloff=4
+set scrolloff=5
 
 " Set functional options
+set mouse=""
 set confirm "for operations (e.g. :q when unsaved) that need confirmation
 set smartindent "after { and keywords ('cinwords')
 set shiftwidth=4
