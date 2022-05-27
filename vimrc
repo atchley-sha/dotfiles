@@ -14,7 +14,7 @@ autocmd BufNewFile * startinsert
 "starts in insert mode if file is new
 set keywordprg=":help"
 "K shows help for word under cursor
-set notermguicolors
+set termguicolors
 set mouse=""
 "disable mouse support
 set backspace=indent,eol,start
