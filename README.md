@@ -5,6 +5,10 @@ For syncing various config files across machines
 
 ## Setup instructions
 
+This repository has several submodules. Clone with `git clone --recurse-submodules`. 
+
+If new submodules are added, usually `git submodule update --init` will be required. Also sometimes `git pull --recurse-submodules`.
+
 ### Links and junctions
 
 #### All platforms
