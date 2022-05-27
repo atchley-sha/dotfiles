@@ -48,11 +48,16 @@ set scrolloff=5
 
 " Set functional options
 set mouse=""
+set backspace=indent,eol,start
+set ttimeout
+set ttimeoutlen=50
+set keywordprg=":help"
 set confirm "for operations (e.g. :q when unsaved) that need confirmation
 set smartindent "after { and keywords ('cinwords')
 set shiftwidth=4
 set smarttab
 set noexpandtab
+set clipboard=unnamed
 
 " change vertical to horizontal with -
 noremap <c-w>- <c-w>t<c-w>K
