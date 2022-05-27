@@ -5,7 +5,7 @@ source ~/dotfiles/bash_commands
 [[ -f ~/.bash_local ]] && source ~/.bash_local
 
 #set PS1 prompt options
-export PS1="\[\033[38;5;11m\]\u\[$(tput sgr0)\]@\h:\[$(tput sgr0)\]\[\033[38;5;51m\][\w]\[$(tput sgr0)\]\[\033[38;5;46m\]\\$\[$(tput sgr0)\] \[$(tput sgr0)\]"
+export PS1="\n\[\033[38;5;11m\]\u\[$(tput sgr0)\]@\h:\[$(tput sgr0)\]\[\033[38;5;51m\][\w]\[$(tput sgr0)\]\[\033[38;5;46m\]\\$\[$(tput sgr0)\] \[$(tput sgr0)\]"
 
 #ls aliases
 alias ls='ls --color=always'
