@@ -1,63 +1,69 @@
 " Load pathogen
 source ~/dotfiles/vim/bundle/vim-pathogen/autoload/pathogen.vim
-execute pathogen#infect('bundle/{}', '~/dotfiles/vim/bundle/{}')
-autocmd VimEnter * Helptags "Loads pathogen help tags
+execute pathogen#infect('bundle/{}')
+autocmd VimEnter * Helptags "loads pathogen help tags
 
-" Misc loading options
+" Reset options
 set sessionoptions-=options
 
+" General options
+set encoding=utf-8
 syntax enable
 filetype plugin indent on
 autocmd BufNewFile * startinsert
-		"Starts in insert mode if file is new
-set encoding=utf-8
+"starts in insert mode if file is new
+set keywordprg=":help"
+"K shows help for word under cursor
+set notermguicolors
+set mouse=""
+"disable mouse support
+set backspace=indent,eol,start
+"backspace through everything in insert mode
+set scrolloff=5
+"leave some space between the cursor and edge of window
+set clipboard=unnamed
+"clpiboard is the unnamed register
 
-" Options for vim-notes plugin
-let g:notes_directories = ['~/dotfiles/vim/notes']
-
-" Fix conflict between nerdtree and vim-signature
-let g:NERDTreeMapMenu='M'
-
-" Make nerdtree command simpler
-command NT NERDTree
-
-" Highlighting colors for character types
-highlight SpecialKey ctermfg=8
-highlight NonText ctermfg=8
-highlight MatchParen ctermbg=8
-
-
-" Set visual/formatting options
-set termguicolors
+" Set visible elements
 set title
 set number
 set ruler
-set laststatus=2 "Always show status line
+set laststatus=2
+"always show status line
 
-set linebreak
-set nowrap
+" Wrap options
+set nowrap "don't wrap by default
+set linebreak "breaks at word rather than character
+set breakindent
+set showbreak='⤷'
+
+" Search options
+set ignorecase
+set smartcase "don't ignore case if uppercase letter(s) typed
+set incsearch "highlight search as it's typed
+set hlsearch
+nnoremap <C-L> :noh<CR><C-L>
+"^L clears serach highlighting until next serach operation
+
+" Tab options
+set noexpandtab
 set tabstop=4
+set softtabstop=-1
+"use shiftwidth value
+set shiftwidth=4
+set autoindent
+set smartindent
+set nocindent
+set indentexpr=""
 
-set cursorline
-highlight Cursorline cterm=NONE ctermbg=0
+" Timeout on keycodes
+set ttimeout
+set ttimeoutlen=50
+
 
 set list
 set listchars=tab:\⋮\ ,eol:⏎,trail:␠,extends:▶,precedes:◀,nbsp:⎵
 
-set scrolloff=5
-
-" Set functional options
-set mouse=""
-set backspace=indent,eol,start
-set ttimeout
-set ttimeoutlen=50
-set keywordprg=":help"
-set confirm "for operations (e.g. :q when unsaved) that need confirmation
-set smartindent "after { and keywords ('cinwords')
-set shiftwidth=4
-set smarttab
-set noexpandtab
-set clipboard=unnamed
 
 " change vertical to horizontal with -
 noremap <c-w>- <c-w>t<c-w>K
@@ -67,9 +73,5 @@ noremap <c-w>\| <c-w>t<c-w>H
 set wildmenu "for command completion
 set wildmode=longest:full,full
 
-set incsearch "Highlight search as it's typed
-set hlsearch
-nnoremap <C-L> :noh<CR><C-L>
-	"^L clears serach highlighting until next serach operation
 
 set visualbell t_vb=
