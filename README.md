@@ -10,11 +10,13 @@ This repository has several submodules. Clone with `git clone --recurse-submodul
 If new submodules are added, usually `git submodule update --init` will be required. Also sometimes `git pull --recurse-submodules`.
 
 
-### Powerline fonts
+### Nerd fonts
 
-Powerline fonts will need to be installed and used. Some pre-patched fonts are in `powerline-fonts/` in the root of this repository. They should easily be able to be installed by running the `install.sh` or `install.ps1` scripts.
+Nerd fonts will need to be installed and used. Some pre-patched fonts are in `nerd-fonts/` in the root of this repository. The `install.sh` or `install.ps1` script will install all of them (which is a lot!!), but they can also be installed individually.
 
 ### Links and junctions
+
+There is a `sh/add_nix_links.sh` script that should add most of these on \*nix systems. On Windows the links will need to be made manually.
 
 #### All platforms
 
@@ -25,6 +27,8 @@ bashrc
 gitconfig
 
 zshrc
+
+Rprofile
 
 #### *nix
 
