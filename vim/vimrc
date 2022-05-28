@@ -55,6 +55,9 @@ set smartindent
 set nocindent
 set indentexpr=""
 
+" Vsplit splits to right
+set splitright
+
 " Timeout on keycodes
 set ttimeout
 set ttimeoutlen=50
