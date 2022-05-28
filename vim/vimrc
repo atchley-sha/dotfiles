@@ -69,4 +69,4 @@ set wildmode=longest:full,full
 
 
 " Source other config files
-source ~/dotfiles/vim/remaps
+source ~/dotfiles/vim/remaps.vim
