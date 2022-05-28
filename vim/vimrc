@@ -1,5 +1,5 @@
 " Load pathogen
-source ~/dotfiles/vim/bundle/vim-pathogen/autoload/pathogen.vim
+source ~/dotfiles/vimfiles/bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect('bundle/{}')
 autocmd VimEnter * Helptags "loads pathogen help tags
 
@@ -13,7 +13,7 @@ filetype plugin indent on
 autocmd BufNewFile * startinsert
 "starts in insert mode if file is new
 set keywordprg=":help"
-"K shows help for word under cursor
+"<K> shows help for word under cursor
 set termguicolors
 set mouse=""
 "disable mouse support
@@ -21,8 +21,9 @@ set backspace=indent,eol,start
 "backspace through everything in insert mode
 set scrolloff=5
 "leave some space between the cursor and edge of window
-set clipboard=unnamed
-"clpiboard is the unnamed register
+
+" Set colorscheme
+colorscheme slate-transparent
 
 " Set visible elements
 set title
@@ -42,8 +43,6 @@ set ignorecase
 set smartcase "don't ignore case if uppercase letter(s) typed
 set incsearch "highlight search as it's typed
 set hlsearch
-nnoremap <C-L> :noh<CR><C-L>
-"^L clears serach highlighting until next serach operation
 
 " Tab options
 set noexpandtab
@@ -60,15 +59,14 @@ set indentexpr=""
 set ttimeout
 set ttimeoutlen=50
 
-
-set list
+" Show non-character items
 set listchars=tab:\⋮\ ,eol:⏎,trail:␠,extends:▶,precedes:◀,nbsp:⎵
+set list
 
-
-" change vertical to horizontal with -
-noremap <c-w>- <c-w>t<c-w>K
-" change horizontal to vertical with |
-noremap <c-w>\| <c-w>t<c-w>H
-
+" Wildmenu options
 set wildmenu "for command completion
 set wildmode=longest:full,full
+
+
+" Source other config files
+source ~/dotfiles/vim/remaps.vim

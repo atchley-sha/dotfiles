@@ -8,4 +8,4 @@ ln -sf ~/dotfiles/zsh/zshrc ~/.zshrc
 ln -sf ~/dotfiles/vim/vimrc ~/.vimrc
 ln -sf ~/dotfiles/R/Rprofile ~/.Rprofile
 
-ln -sf ~/dotfiles/vim ~/.vim
+ln -sf ~/dotfiles/vimfiles ~/.vim
