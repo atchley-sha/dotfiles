@@ -25,9 +25,6 @@
 [submodule "powerline-fonts"]
 	path = powerline-fonts
 	url = https://github.com/powerline/fonts.git
-[submodule "vim/bundle/ctrlp.vim"]
-	path = vim/bundle/ctrlp.vim
-	url = https://github.com/kien/ctrlp.vim.git
 [submodule "vim/bundle/vim-devicons"]
 	path = vim/bundle/vim-devicons
 	url = https://github.com/ryanoasis/vim-devicons.git
