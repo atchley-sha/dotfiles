@@ -21,7 +21,7 @@ let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ' '
 let g:airline_symbols.maxlinenr = ' '
 let g:airline_symbols.colnr = ' :'
-let g:airline_symbols.crypt = '  '
+let g:airline_symbols.crypt = ''
 let g:airline_symbols.paste = '∥'
 let g:airline_symbols.spell = '暈'
 let g:airline_detect_spelllang = 1
@@ -43,11 +43,12 @@ let g:airline#extensions#branch#format = 2
 let g:airline#extensions#branch#displayed_head_limit = 10
 
 " Set section truncation
-let g:airline#extensions#default#section_truncate_width = {
-      \ 'b': 79,
-      \ 'x': 60,
-      \ 'y': 88,
-      \ 'z': 45,
-      \ 'warning': 80,
-      \ 'error': 80,
-      \ }
+let g:airline#extensions#default#section_truncate_width = {}
+"let g:airline#extensions#default#section_truncate_width = {
+"      \ 'b': 79,
+"      \ 'x': 60,
+"      \ 'y': 88,
+"      \ 'z': 45,
+"      \ 'warning': 80,
+"      \ 'error': 80,
+"      \ }
