@@ -72,6 +72,3 @@ noremap <c-w>\| <c-w>t<c-w>H
 
 set wildmenu "for command completion
 set wildmode=longest:full,full
-
-
-set visualbell t_vb=
