@@ -36,11 +36,13 @@ zshrc
 
 Rprofile
 
+tmux_conf -> ~/.tmux.conf
+
 #### *nix
 
-vimrc -> ~/.vimrc
+vim/vimrc -> ~/.vimrc
 
-vim/ -> ~/.vim
+vimfiles/ -> ~/.vim
 
 #### Windows
 
@@ -48,6 +50,6 @@ profile\_ps1 -> profile.ps1
 
 Microsoft\_PowerShell\_profile\_ps1 -> Microsoft\_PowerShell\_profile.ps1
 
-vimrc -> ~/_vimrc
+vim/vimrc -> ~/_vimrc
 
-vim/ -> ~/vimfiles
+vimfiles/ -> ~/vimfiles
