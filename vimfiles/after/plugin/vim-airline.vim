@@ -25,7 +25,7 @@ let g:airline_symbols.crypt = ''
 let g:airline_symbols.paste = '∥'
 let g:airline_symbols.spell = '暈'
 let g:airline_detect_spelllang = 1
-let g:airline_symbols.notexists = '∄'
+let g:airline_symbols.notexists = ' ∄'
 let g:airline_symbols.whitespace = 'Ξ'
 
 " Tabline options
