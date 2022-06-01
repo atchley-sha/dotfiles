@@ -22,3 +22,21 @@ bind -n M-Right select-pane -R
 bind -n M-Up select-pane -U
 bind -n M-Down select-pane -D
 
+# Misc options
+set -g mouse on
+set -g base-index 1
+setw -g pane-base-index 1
+set -g renumber-windows on
+
+# Status bar options
+set -g status-keys vi
+
+# Loud or quiet?
+set -g visual-activity off
+set -g visual-bell off
+set -g visual-silence off
+setw -g monitor-activity off
+set -g bell-action none
+
+# Source other files
+source-file ~/dotfiles/tmux/tmux_design

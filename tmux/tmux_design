@@ -1,0 +1,33 @@
+# Pane borders
+set -g pane-border-style fg=color240
+set -g pane-active-border-style fg=color15
+
+# Statusbar
+set -g status-position bottom
+set -g status-justify left
+set -g status-style bg=color81,fg=color16
+
+#Status-left
+set -g status-left '#[bg=color15]#[fg=color16]'
+set -ga status-left '#{?client_prefix,#[bg=color1]#[fg=color15],}'
+set -ga status-left ' ♣ [#S]'
+set -ga status-left '#{?window_zoomed_flag,#[bg=color124]#[fg=color15] ﬕ , }'
+set -ga status-left '#[bg=default] '
+set -g status-left-length 25
+
+#Window status
+set-window-option -g window-status-current-style fg=color15,bg=color20
+set-window-option -g window-status-style fg=default,bg=default
+set -g window-status-current-format '#[fg=color20]#[bg=color81]#[fg=color15]#[bg=color20] #I: #W '
+set -ga window-status-current-format '#{?#{!=:#{window_panes},1},[#{window_panes}] ,}#[fg=color20]#[bg=color81]'
+set -g window-status-format '#[fg=color20]#[bg=default]#[fg=default]#[bg=default] #I: #W '
+set -ga window-status-format '#{?#{!=:#{window_panes},1},[#{window_panes}] ,}#[fg=color20]#[bg=default]'
+
+#Status right
+set -g status-right '| #[fg=bold]#h | %H:%M '
+set -g status-right-length 50
+
+
+
+
+# Message style
