@@ -14,7 +14,7 @@ unbind '"'
 unbind %
 
 # Reload config file with 'r'
-bind r source-file ~/.tmux.conf; display "~/.tmux.conf sourced!"
+bind r source ~/.tmux.conf\; display "~/.tmux.conf sourced!"
 
 # Switch panes using Alt-arrow without prefix
 bind -n M-Left select-pane -L
