@@ -3,6 +3,10 @@ unbind C-b
 set-option -g prefix 'C-a'
 bind-key 'C-a' send-prefix
 
+# Fix true colors in tmux
+set -g default-terminal 'xterm-256color'
+set -g terminal-overrides ',xterm-256color:Tc'
+
 # Sane split commands
 bind | split-window -h
 bind - split-window -v
