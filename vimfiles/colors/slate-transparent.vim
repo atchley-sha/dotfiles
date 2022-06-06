@@ -1,5 +1,5 @@
-" Name:         slate
-" Description:  Remake of slate
+" Name:         slate-transparent
+" Description:  Remake of slate but transparent background
 " Author:       Original maintainer Ralph Amissah <ralph@amissah.com>
 " Maintainer:   Original maintainer Ralph Amissah <ralph@amissah.com>
 " Website:      https://github.com/vim/colorschemes
@@ -18,13 +18,13 @@ let s:t_Co = exists('&t_Co') && !empty(&t_Co) && &t_Co > 1 ? &t_Co : 1
 if (has('termguicolors') && &termguicolors) || has('gui_running')
   let g:terminal_ansi_colors = ['#000000', '#ff0000', '#5f8700', '#ffff00', '#87d7ff', '#d7d787', '#ffd7af', '#666666', '#333333', '#ffafaf', '#00875f', '#ffd700', '#5f87d7', '#afaf87', '#ff8787', '#ffffff']
 endif
-hi Normal guifg=#ffffff guibg=NONE gui=NONE cterm=NONE
-hi EndOfBuffer guifg=#5f87d7 guibg=NONE gui=NONE cterm=NONE
+hi Normal guifg=#eeeeee guibg=NONE gui=NONE cterm=NONE
+hi EndOfBuffer guifg=#666666 guibg=NONE gui=NONE cterm=NONE
 hi StatusLine guifg=#000000 guibg=#afaf87 gui=NONE cterm=NONE
 hi StatusLineNC guifg=#666666 guibg=#afaf87 gui=NONE cterm=NONE
 hi StatusLineTerm guifg=#000000 guibg=#afaf87 gui=NONE cterm=NONE
 hi StatusLineTermNC guifg=#666666 guibg=#afaf87 gui=NONE cterm=NONE
-hi VertSplit guifg=#666666 guibg=#afaf87 gui=NONE cterm=NONE
+hi VertSplit guifg=#eeeeee guibg=#666666 gui=NONE cterm=NONE
 hi PmenuSel guifg=#262626 guibg=#d7d787 gui=NONE cterm=NONE
 hi Pmenu guifg=NONE guibg=#4a4a4a gui=NONE cterm=NONE
 hi PmenuSbar guifg=NONE guibg=#262626 gui=NONE cterm=NONE
@@ -34,22 +34,22 @@ hi TabLine guifg=#666666 guibg=#333333 gui=NONE cterm=NONE
 hi TabLineFill guifg=#ff8787 guibg=#333333 gui=NONE cterm=NONE
 hi ToolbarLine guifg=NONE guibg=NONE gui=NONE ctermfg=NONE ctermbg=NONE cterm=NONE
 hi ToolbarButton guifg=#262626 guibg=#d7d787 gui=NONE cterm=NONE
-hi NonText guifg=#5f87d7 guibg=NONE gui=NONE cterm=NONE
+hi NonText guifg=#444444 guibg=NONE gui=NONE cterm=NONE
 hi SpecialKey guifg=#00875f guibg=NONE gui=NONE cterm=NONE
 hi QuickFixLine guifg=#000000 guibg=#5f87d7 gui=NONE cterm=NONE
-hi Folded guifg=#666666 guibg=#000000 gui=NONE cterm=NONE
-hi FoldColumn guifg=#5f87d7 guibg=#000000 gui=NONE cterm=NONE
+hi Folded guifg=#000000 guibg=#eeeebb gui=NONE cterm=NONE
+hi FoldColumn guifg=#ffffff guibg=NONE gui=NONE cterm=NONE
 hi CursorLine guifg=NONE guibg=#333333 gui=NONE cterm=NONE
 hi CursorColumn guifg=NONE guibg=#333333 gui=NONE cterm=NONE
-hi CursorLineNr guifg=NONE guibg=#333333 gui=NONE cterm=NONE
+hi CursorLineNr guifg=#ffffff guibg=#333333 gui=NONE cterm=NONE
 hi Visual guifg=#d7d787 guibg=#5f8700 gui=NONE cterm=NONE
 hi SignColumn guifg=NONE guibg=#262626 gui=NONE cterm=NONE
 hi VisualNOS guifg=#d7d787 guibg=#5f8700 gui=NONE cterm=NONE
-hi LineNr guifg=#666666 guibg=NONE gui=NONE cterm=NONE
+hi LineNr guifg=#444444 guibg=NONE gui=NONE cterm=NONE
 hi Underlined guifg=#5f87d7 guibg=NONE gui=underline cterm=underline
 hi Error guifg=#ff0000 guibg=#ffffff gui=reverse cterm=reverse
 hi ErrorMsg guifg=#ff0000 guibg=#000000 gui=reverse cterm=reverse
-hi ModeMsg guifg=#262626 guibg=#ffd700 gui=NONE cterm=NONE
+hi ModeMsg guifg=NONE guibg=NONE gui=NONE cterm=NONE
 hi WarningMsg guifg=#ff8787 guibg=NONE gui=NONE cterm=NONE
 hi MoreMsg guifg=#00875f guibg=NONE gui=NONE cterm=NONE
 hi Question guifg=#ffd700 guibg=NONE gui=NONE cterm=NONE
