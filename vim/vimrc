@@ -29,6 +29,7 @@ colorscheme slate-transparent
 set title
 set number
 set ruler
+set foldcolumn=4
 set laststatus=2
 "always show status line
 
@@ -36,7 +37,7 @@ set laststatus=2
 set nowrap "don't wrap by default
 set linebreak "breaks at word rather than character
 set breakindent
-set showbreak='⤷'
+set showbreak=⤷
 
 " Search options
 set ignorecase
@@ -55,8 +56,9 @@ set smartindent
 set nocindent
 set indentexpr=""
 
-" Vsplit splits to right
+" Split to right and bottom
 set splitright
+set splitbelow
 
 " Timeout on keycodes
 set ttimeout
@@ -65,6 +67,12 @@ set ttimeoutlen=50
 " Show non-character items
 set listchars=tab:\⋮\ ,eol:⏎,trail:␠,extends:▶,precedes:◀,nbsp:⎵
 set list
+
+" Set fold options
+set foldmethod=syntax
+
+" Chars for fold, vsplit, and eob
+set fillchars=vert:\|,fold:\ ,foldopen:-,foldclose:+,foldsep:\|,eob:~
 
 " Wildmenu options
 set wildmenu "for command completion
