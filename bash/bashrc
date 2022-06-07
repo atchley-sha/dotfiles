@@ -4,6 +4,9 @@ source ~/dotfiles/bash/bash_commands
 # Source local bash stuff
 [[ -f ~/.bash_local ]] && source ~/.bash_local
 
+# Don't auto activate conda (may not work the first time)
+conda && conda config --set auto_activate_base false
+
 # Set PS1 prompt options
 export PS1="\n\[\033[38;5;11m\]\u\[$(tput sgr0)\]@\h:\[$(tput sgr0)\]\[\033[38;5;51m\][\w]\[$(tput sgr0)\]\[\033[38;5;46m\]\\$\[$(tput sgr0)\] \[$(tput sgr0)\]"
 
