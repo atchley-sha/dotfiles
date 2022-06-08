@@ -3,7 +3,7 @@ set -g pane-border-style fg=color240
 set -g pane-active-border-style fg=color15
 
 # Statusbar
-set -g status-position bottom
+set -g status-position top
 set -g status-justify left
 set -g status-style bg=color81,fg=color16
 

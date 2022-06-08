@@ -19,3 +19,9 @@ function up {
 	}
 	cd $P
 }
+
+if (Test-Path -Path ~/.conda_init.ps1 -PathType Leaf)
+{
+	. ~/.conda_init.ps1
+	conda config --set auto_activate_base false
+}
