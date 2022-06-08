@@ -22,6 +22,5 @@ alias byuscssh='ssh satchley@ssh.rc.byu.edu'
 # Grep auto-color
 alias grep='grep --color=always'
 
-# less defaults nowrap and line number
+# Less defaults nowrap and line number
 alias less='less -SN'
-

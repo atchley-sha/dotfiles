@@ -5,15 +5,19 @@ export LC_ALL="en_US.UTF-8"
 export LANG="en_US.UTF-8"
 
 # PATH additions
-export PATH=$PATH:~/usr/gradle-7.4.2/bin
+# Use locally-installed software if available
+export PATH=/zhome/satchley/.local/bin:$PATH:~/usr/gradle-7.4.2/bin
 
-# Use locally-installed version of vim
-alias vim='/zhome/satchley/.local/bin/vim'
+## Add local libraries to LD_LIBRARY_PATH
+#export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/zhome/satchley/.local/lib
 
 # Better queue and sacct view
 alias sq='squeue --format="%.16i | %.15j | %.20T | %.20S | %.10M | %.10l | %.12u | %.4C | %.10m | %R" --me'
 alias sa='sacct -X -o JobID%16,JobName%15,State%20,Start%20,Elapsed%12,TimeLimit%12,User%12,NCPUs%5,ReqMem%10'
 alias safull='sacct -o JobID%16,JobName%15,State%20,Start%20,Elapsed%12,TimeLimit%12,User%12,NCPUs%5,ReqMem%10,TotalCPU%12,CPUTime%12'
+
+# Tmux socket directory
+export TMUX_TMPDIR=/zhome/satchley/.tmux/socket
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
