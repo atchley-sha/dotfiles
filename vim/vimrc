@@ -10,16 +10,16 @@ set sessionoptions-=options
 set encoding=utf-8
 syntax enable
 filetype plugin indent on
+"start in insert mode if file is new
 autocmd BufNewFile * startinsert
-"starts in insert mode if file is new
+"<K> to show help for word under cursor
 set keywordprg=":help"
-"<K> shows help for word under cursor
-set mouse=""
 "disable mouse support
-set backspace=indent,eol,start
+set mouse=""
 "backspace through everything in insert mode
-set scrolloff=5
+set backspace=indent,eol,start
 "leave some space between the cursor and edge of window
+set scrolloff=5
 
 " Set color options
 colorscheme slate-transparent
@@ -27,7 +27,7 @@ set termguicolors
 "This is only necessary if you use "set termguicolors".
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-"fixes glitch? in colors when using vim with tmux
+"fix glitch? in colors when using vim with tmux
 set t_Co=256
 
 " Set visible elements
@@ -35,26 +35,30 @@ set title
 set number
 set ruler
 set foldcolumn=4
-set laststatus=2
 "always show status line
+set laststatus=2
 
 " Wrap options
-set nowrap "don't wrap by default
-set linebreak "breaks at word rather than character
+"don't wrap by default
+set nowrap
+"breaks at word rather than character
+set linebreak
 set breakindent
 set showbreak=⤷
 
 " Search options
 set ignorecase
-set smartcase "don't ignore case if uppercase letter(s) typed
-set incsearch "highlight search as it's typed
+"don't ignore case if uppercase letter(s) typed
+set smartcase
+"highlight search as it's typed
+set incsearch
 set hlsearch
 
 " Tab options
 set noexpandtab
 set tabstop=4
-set softtabstop=-1
 "use shiftwidth value
+set softtabstop=-1
 set shiftwidth=4
 set autoindent
 set smartindent
