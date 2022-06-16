@@ -1,32 +1,70 @@
+# Set colors
+ACTIVE_BORDER=color89
+BORDER=color22
+STATUS_BG=color81
+
+ACTIVE_WINDOW=color20
+ACTIVE_WINDOW_TEXT=color15
+INACTIVE_WINDOW=$STATUS_BG
+INACTIVE_WINDOW_TEXT=color16
+
+WINDOW_SEPARATOR=$ACTIVE_WINDOW
+
+INFO_BG=$ACTIVE_WINDOW
+INFO_TEXT=white
+
+SESSION_BG=color15
+SESSION_TEXT=color16
+PREFIX_BG=color1
+PREFIX_TEXT=color15
+
+ZOOMED_BG=color1
+ZOOMED_TEXT=color15
+
+
+# Set shapes
+ICON=♣
+ZOOMED=ﬕ
+
+ACTIVE_LEFT_SEP=
+ACTIVE_RIGHT_SEP=
+LEFT_SEP=
+RIGHT_SEP=
+
+
 # Pane borders
-set -g pane-border-style fg=color240
-set -g pane-active-border-style fg=color15
+set -g pane-border-style fg=$BORDER
+set -g pane-active-border-style fg=$ACTIVE_BORDER
 
 # Statusbar
 set -g status-position top
 set -g status-justify left
-set -g status-style bg=color81,fg=color16
 
 #Status-left
-set -g status-left '#[bg=color15]#[fg=color16]'
-set -ga status-left '#{?client_prefix,#[bg=color1]#[fg=color15],}'
-set -ga status-left ' ♣ [#S]'
-set -ga status-left '#{?window_zoomed_flag,#[bg=color124]#[fg=color15] ﬕ , }'
-set -ga status-left '#[bg=default] '
+set -g status-left "#[bg=$SESSION_BG]#[fg=$SESSION_TEXT]"
+set -ga status-left "#{?client_prefix,#[bg=$PREFIX_BG]#[fg=$PREFIX_TEXT],}"
+set -ga status-left " $ICON [#S]"
+set -ga status-left "#{?window_zoomed_flag,#[bg=$ZOOMED_BG]#[fg=$ZOOMED_TEXT] $ZOOMED , }"
+set -ga status-left "#[bg=$STATUS_BG] "
 set -g status-left-length 25
 
 #Window status
-set-window-option -g window-status-current-style fg=color15,bg=color20
-set-window-option -g window-status-style fg=default,bg=default
-set -g window-status-current-format '#[fg=color20]#[bg=color81]#[fg=color15]#[bg=color20] #I: #W '
-set -ga window-status-current-format '#{?#{!=:#{window_panes},1},[#{window_panes}] ,}#[fg=color20]#[bg=color81]'
-set -g window-status-format '#[fg=color20]#[bg=default]#[fg=default]#[bg=default] #I: #W '
-set -ga window-status-format '#{?#{!=:#{window_panes},1},[#{window_panes}] ,}#[fg=color20]#[bg=default]'
+set-window-option -g window-status-current-style fg=$ACTIVE_WINDOW_TEXT,bg=$ACTIVE_WINDOW
+set-window-option -g window-status-style fg=$INACTIVE_WINDOW_TEXT,bg=$INACTIVE_WINDOW
+
+set -g window-status-current-format "#[fg=$WINDOW_SEPARATOR]#[bg=$STATUS_BG]$ACTIVE_LEFT_SEP"
+set -ga window-status-current-format "#[fg=$ACTIVE_WINDOW_TEXT]#[bg=$ACTIVE_WINDOW] #I: #W "
+set -ga window-status-current-format "#{?#{!=:#{window_panes},1},[#{window_panes}] ,}"
+set -ga window-status-current-format "#[fg=$WINDOW_SEPARATOR]#[bg=$STATUS_BG]$ACTIVE_RIGHT_SEP"
+
+set -g window-status-format "#[fg=$WINDOW_SEPARATOR]#[bg=$STATUS_BG]$LEFT_SEP"
+set -ga window-status-format "#[fg=$INACTIVE_WINDOW_TEXT]#[bg=$STATUS_BG] #I: #W "
+set -ga window-status-format "#{?#{!=:#{window_panes},1},[#{window_panes}] ,}"
+set -ga window-status-format "#[fg=$WINDOW_SEPARATOR]#[bg=$STATUS_BG]$RIGHT_SEP"
 
 #Status right
-set -g status-right '| #[fg=bold]#h | %H:%M '
+set -g status-right "#[fg=$INFO_TEXT]#[bg=$INFO_BG] #h | %H:%M "
 set -g status-right-length 50
-
 
 
 
