@@ -39,6 +39,7 @@ set -g pane-active-border-style fg=$ACTIVE_BORDER
 # Statusbar
 set -g status-position top
 set -g status-justify left
+set -g status-style bg=$STATUS_BG
 
 #Status-left
 set -g status-left "#[bg=$SESSION_BG]#[fg=$SESSION_TEXT]"
@@ -58,7 +59,7 @@ set -ga window-status-current-format "#{?#{!=:#{window_panes},1},[#{window_panes
 set -ga window-status-current-format "#[fg=$WINDOW_SEPARATOR]#[bg=$STATUS_BG]$ACTIVE_RIGHT_SEP"
 
 set -g window-status-format "#[fg=$WINDOW_SEPARATOR]#[bg=$STATUS_BG]$LEFT_SEP"
-set -ga window-status-format "#[fg=$INACTIVE_WINDOW_TEXT]#[bg=$STATUS_BG] #I: #W "
+set -ga window-status-format "#[fg=$INACTIVE_WINDOW_TEXT]#[bg=$INACTIVE_WINDOW] #I: #W "
 set -ga window-status-format "#{?#{!=:#{window_panes},1},[#{window_panes}] ,}"
 set -ga window-status-format "#[fg=$WINDOW_SEPARATOR]#[bg=$STATUS_BG]$RIGHT_SEP"
 
