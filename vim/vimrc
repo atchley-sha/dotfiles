@@ -88,7 +88,7 @@ set list
 set foldmethod=syntax
 
 " Chars for fold, vsplit, and eob
-set fillchars=vert:\|,fold:\ ,foldopen:-,foldclose:+,foldsep:\|,eob:~
+set fillchars=vert:\|,fold:\ 
 
 " Wildmenu options
 set wildmenu "for command completion
