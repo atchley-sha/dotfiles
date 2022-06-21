@@ -31,3 +31,6 @@
 [submodule "ctrlpvim"]
 	path = vimfiles/bundle/ctrlp.vim
 	url = https://github.com/ctrlpvim/ctrlp.vim.git
+[submodule "vimfiles/bundle/quick-scope"]
+	path = vimfiles/bundle/quick-scope
+	url = https://github.com/unblevable/quick-scope.git
