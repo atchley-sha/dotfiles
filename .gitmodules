@@ -34,3 +34,6 @@
 [submodule "vimfiles/bundle/quick-scope"]
 	path = vimfiles/bundle/quick-scope
 	url = https://github.com/unblevable/quick-scope.git
+[submodule "vimfiles/bundle/vim-hardtime"]
+	path = vimfiles/bundle/vim-hardtime
+	url = https://github.com/takac/vim-hardtime.git
