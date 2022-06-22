@@ -8,8 +8,12 @@ set -g default-terminal 'screen-256color'
 set -g terminal-overrides ',xterm-256color:Tc'
 
 # Sane split commands
-bind | split-window -h
-bind - split-window -v
+bind-key "|" split-window -h -c "#{pane_current_path}"
+bind-key "\\" split-window -fh -c "#{pane_current_path}"
+
+bind-key "-" split-window -v -c "#{pane_current_path}"
+bind-key "_" split-window -fv -c "#{pane_current_path}"
+
 unbind '"'
 unbind %
 
@@ -42,8 +46,14 @@ set -g bell-action none
 source-file ~/dotfiles/tmux/tmux_design
 
 
+bind \` switch-client -t'{marked}'
 set -g renumber-windows on
 set -g status on
 set -g pane-border-lines heavy
 set -g pane-border-status top
-set -g pane-border-format " #P: #{pane_current_command} (#{pane_current_path}) "
+set -g pane-border-format "#[bold] #P. (#{pane_current_command}) #{pane_current_path} "
+bind c new-window -c "#{pane_current_path}"
+bind -r "<" swap-window -d -t -1
+bind -r ">" swap-window -d -t +1
+bind j choose-window 'join-pane -h -s "%%"'
+bind J choose-window 'join-pane -s "%%"'

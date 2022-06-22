@@ -57,11 +57,13 @@ set-window-option -g window-status-style fg=$INACTIVE_WINDOW_TEXT,bg=$INACTIVE_W
 set -g window-status-current-format "#[fg=$WINDOW_SEPARATOR]#[bg=$STATUS_BG]$ACTIVE_LEFT_SEP"
 set -ga window-status-current-format "#[fg=$ACTIVE_WINDOW_TEXT]#[bg=$ACTIVE_WINDOW] #I: #W "
 set -ga window-status-current-format "#{?#{!=:#{window_panes},1},[#{window_panes}] ,}"
+set -ga window-status-current-format "#{?window_marked_flag,✻ ,}"
 set -ga window-status-current-format "#[fg=$WINDOW_SEPARATOR]#[bg=$STATUS_BG]$ACTIVE_RIGHT_SEP"
 
 set -g window-status-format "#[fg=$WINDOW_SEPARATOR]#[bg=$STATUS_BG]$LEFT_SEP"
 set -ga window-status-format "#[fg=$INACTIVE_WINDOW_TEXT]#[bg=$INACTIVE_WINDOW] #I: #W "
 set -ga window-status-format "#{?#{!=:#{window_panes},1},[#{window_panes}] ,}"
+set -ga window-status-format "#{?window_marked_flag,✻ ,}"
 set -ga window-status-format "#[fg=$WINDOW_SEPARATOR]#[bg=$STATUS_BG]$RIGHT_SEP"
 
 #Status right
