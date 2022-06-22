@@ -40,3 +40,10 @@ set -g bell-action none
 
 # Source other files
 source-file ~/dotfiles/tmux/tmux_design
+
+
+set -g renumber-windows on
+set -g status on
+set -g pane-border-lines heavy
+set -g pane-border-status top
+set -g pane-border-format " #P: #{pane_current_command} (#{pane_current_path}) "
