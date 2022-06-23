@@ -15,9 +15,7 @@ required. Also sometimes `git pull --recurse-submodules`.
 ### Nerd fonts
 
 Nerd fonts will need to be installed and used. Some pre-patched fonts are in
-`nerd-fonts/` in the root of this repository. The `install.sh` or `install.ps1`
-script will install all of them (which is a lot!!), but they can also be
-installed individually.
+`nerd-fonts/` in the root of this repository.
 
 ### Links and junctions
 
