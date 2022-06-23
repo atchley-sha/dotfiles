@@ -1,24 +1,50 @@
 # Remap prefix from 'C-b' to 'C-a'
 unbind C-b
 set-option -g prefix 'C-a'
-bind-key 'C-a' send-prefix
+bind 'C-a' send-prefix
 
+########## OPTIONS ##################
 # Fix true colors in tmux
 set -g default-terminal 'screen-256color'
 set -g terminal-overrides ',xterm-256color:Tc'
 
-# Sane split commands
-bind-key "|" split-window -h -c "#{pane_current_path}"
-bind-key "\\" split-window -fh -c "#{pane_current_path}"
+# Misc options
+set -g mouse on
+set -g base-index 1
+set -g pane-base-index 1
+set -g renumber-windows on
+set -g editor vim
 
-bind-key "-" split-window -v -c "#{pane_current_path}"
-bind-key "_" split-window -fv -c "#{pane_current_path}"
+# Status bar options
+set -g status on
+set -g status-keys vi
+set -g mode-keys vi
 
-unbind '"'
-unbind %
+# Pane options
+set -g pane-border-lines heavy
+set -g pane-border-status top
+set -g pane-border-format "#[bold] #P. (#{pane_current_command}) #{pane_current_path} "
+set -g main-pane-height 50%
+set -g main-pane-width 50%
 
+# Loud or quiet?
+set -g visual-activity off
+set -g visual-bell off
+set -g visual-silence off
+set -g monitor-activity off
+set -g bell-action none
+
+############# BINDINGS ##################
 # Reload config file with 'r'
 bind r source ~/.tmux.conf\; display "~/.tmux.conf sourced!"
+
+# Sane split commands
+bind "|" split-window -h -c "#{pane_current_path}"
+bind "\\" split-window -fh -c "#{pane_current_path}"
+bind "-" split-window -v -c "#{pane_current_path}"
+bind "_" split-window -fv -c "#{pane_current_path}"
+unbind '"'
+unbind %
 
 # Switch panes using Alt-arrow without prefix
 bind -n M-Left select-pane -L
@@ -26,34 +52,21 @@ bind -n M-Right select-pane -R
 bind -n M-Up select-pane -U
 bind -n M-Down select-pane -D
 
-# Misc options
-set -g mouse on
-set -g base-index 1
-setw -g pane-base-index 1
-set -g renumber-windows on
+# Move to marked pane
+bind \` switch-client -t'{marked}'
 
-# Status bar options
-set -g status-keys vi
+# Join panes
+bind j choose-window 'join-pane -h -s "%%"'
+bind J choose-window 'join-pane -s "%%"'
 
-# Loud or quiet?
-set -g visual-activity off
-set -g visual-bell off
-set -g visual-silence off
-setw -g monitor-activity off
-set -g bell-action none
+# Swap windows
+bind -r "<" swap-window -d -t -1
+bind -r ">" swap-window -d -t +1
+
+# Keep current path in new windows
+bind c new-window -c "#{pane_current_path}"
+
+############################################
 
 # Source other files
 source-file ~/dotfiles/tmux/tmux_design
-
-
-bind \` switch-client -t'{marked}'
-set -g renumber-windows on
-set -g status on
-set -g pane-border-lines heavy
-set -g pane-border-status top
-set -g pane-border-format "#[bold] #P. (#{pane_current_command}) #{pane_current_path} "
-bind c new-window -c "#{pane_current_path}"
-bind -r "<" swap-window -d -t -1
-bind -r ">" swap-window -d -t +1
-bind j choose-window 'join-pane -h -s "%%"'
-bind J choose-window 'join-pane -s "%%"'

@@ -1,6 +1,6 @@
 # Set colors
-ACTIVE_WINDOW_BORDER=color89
-INACTIVE_WINDOW_BORDER=color22
+ACTIVE_PANE_BORDER=color89
+INACTIVE_PANE_BORDER=color22
 
 STATUS_BG=color81
 
@@ -33,8 +33,8 @@ RIGHT_SEP=
 
 
 # Pane borders
-set -g pane-border-style fg=$INACTIVE_WINDOW_BORDER
-set -g pane-active-border-style fg=$ACTIVE_WINDOW_BORDER
+set -g pane-border-style fg=$INACTIVE_PANE_BORDER
+set -g pane-active-border-style fg=$ACTIVE_PANE_BORDER
 
 # Statusbar
 set -g status-position top
@@ -69,7 +69,3 @@ set -ga window-status-format "#[fg=$WINDOW_SEPARATOR]#[bg=$STATUS_BG]$RIGHT_SEP"
 #Status right
 set -g status-right "#[fg=$INFO_TEXT]#[bg=$INFO_BG] #h | %H:%M "
 set -g status-right-length 50
-
-
-
-# Message style
