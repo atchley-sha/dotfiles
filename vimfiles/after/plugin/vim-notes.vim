@@ -1,1 +1,1 @@
-let g:notes_directories = ['~/dotfiles/vim/misc/notes']
+let g:notes_directories = ['~/dotfiles/vimfiles/misc/notes']
