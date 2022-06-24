@@ -1,12 +1,20 @@
 
 # Custom prompt
+#function prompt {
+#	Write-Host ("$env:UserName") -NoNewLine -ForegroundColor Yellow
+#	Write-Host ("@$env:ComputerName`:") -NoNewLine
+#	Write-Host ("[$(Get-Location)]") -NoNewLine -ForegroundColor Cyan
+#	Write-Host (" PS`>") -NoNewLine -ForegroundColor Green
+#	return " "
+#}
+
 function prompt {
-	Write-Host ("$env:UserName") -NoNewLine -ForegroundColor Yellow
-	Write-Host ("@$env:ComputerName`:") -NoNewLine
 	Write-Host ("[$(Get-Location)]") -NoNewLine -ForegroundColor Cyan
-	Write-Host (" PS`>") -NoNewLine -ForegroundColor Green
+	Write-Host ("`>") -NoNewLine -ForegroundColor White
 	return " "
 }
+
+Set-PSReadLineOption -BellStyle None -ContinuationPrompt "-> "
 
 # Up function
 function up {
