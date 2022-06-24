@@ -10,6 +10,7 @@ conda &>/dev/null && conda config --set auto_activate_base false
 # Set PS1 prompt options
 #export PS1="\n\[\e[1;33m\]\u\[\e[1;00m\]@\h:\[\e[1;36m\][\w]\[\e[1;32m\]\\$ \[\e[00m\]"
 export PS1="\n\[\e[1;36m\][\w]\[\e[00m\]$ "
+export PS2="-> "
 
 # Trim long paths in prompt
 export PROMPT_DIRTRIM=3
