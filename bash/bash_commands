@@ -1,9 +1,26 @@
+# vim: ft=bash
+
 #Add custom bash commands to be sourced in bashrc
+
+# Show PATH by line
+alias showpath='echo $PATH | tr : "\n"'
+
+# ls aliases
+alias ls='ls --color=always'
+alias ll='ls -oh'
+alias la='ll -A'
+alias lt='ll -t'
+
+# Alias to ssh into byu supercomputer
+alias byuscssh='ssh satchley@ssh.rc.byu.edu'
+
+#refresh tmux
+alias tmuxref='pkill -SIGUSR1 tmux'
 
 #create BEAM jar and move to convenient directory
 ## must be run from in beam directory and have BEAM and beam_scenarios in same directory
 alias beamjar='gradle shadowjar && [[ -d ../beam_scenarios ]] && \
-	  cp ./build/libs/beam.sim.RunBeam.jar ../beam_scenarios/beam.jar'
+	cp ./build/libs/beam.sim.RunBeam.jar ../beam_scenarios/beam.jar'
 
 
 #function for moving up
@@ -12,28 +29,25 @@ function up()
 	LIMIT=$1
 	P=$PWD
 	for ((i=1; i <= LIMIT; i++))
-		do
-			P=$P/..
-		done
+	do
+		P=$P/..
+	done
 	cd $P
 }
 
 # Truecolor test
 function truecolortest() {
-awk 'BEGIN{
-    s="/\\/\\/\\/\\/\\"; s=s s s s s s s s;
-    for (colnum = 0; colnum<77; colnum++) {
-        r = 255-(colnum*255/76);
-        g = (colnum*510/76);
-        b = (colnum*255/76);
-        if (g>255) g = 510-g;
-        printf "\033[48;2;%d;%d;%dm", r,g,b;
-        printf "\033[38;2;%d;%d;%dm", 255-r,255-g,255-b;
-        printf "%s\033[0m", substr(s,colnum+1,1);
-    }
-    printf "\n";
-}'
+	awk 'BEGIN{
+	s="/\\/\\/\\/\\/\\"; s=s s s s s s s s;
+	for (colnum = 0; colnum<77; colnum++) {
+		r = 255-(colnum*255/76);
+		g = (colnum*510/76);
+		b = (colnum*255/76);
+		if (g>255) g = 510-g;
+			printf "\033[48;2;%d;%d;%dm", r,g,b;
+			printf "\033[38;2;%d;%d;%dm", 255-r,255-g,255-b;
+			printf "%s\033[0m", substr(s,colnum+1,1);
+		}
+		printf "\n";
+	}'
 }
-
-# Show PATH by line
-alias showpath='echo $PATH | tr : "\n"'

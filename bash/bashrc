@@ -15,15 +15,6 @@ export PS2="  -> "
 # Trim long paths in prompt
 export PROMPT_DIRTRIM=3
 
-# ls aliases
-alias ls='ls --color=always'
-alias ll='ls -oh'
-alias la='ll -A'
-alias lt='ll -t'
-
-# Alias to ssh into byu supercomputer
-alias byuscssh='ssh satchley@ssh.rc.byu.edu'
-
 # Grep auto-color
 alias grep='grep --color=always'
 
