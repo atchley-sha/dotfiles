@@ -1,30 +1,33 @@
 # Set colors
-ACTIVE_PANE_BORDER=color89
-INACTIVE_PANE_BORDER=color22
-
 STATUS_BG=color81
 
 ACTIVE_WINDOW=color20
-ACTIVE_WINDOW_TEXT=color15
+ACTIVE_WINDOW_TEXT=white
 INACTIVE_WINDOW=$STATUS_BG
-INACTIVE_WINDOW_TEXT=color16
+INACTIVE_WINDOW_TEXT=black
 WINDOW_SEPARATOR=$ACTIVE_WINDOW
 
 INFO_BG=$ACTIVE_WINDOW
-INFO_TEXT=color15
+INFO_TEXT=$ACTIVE_WINDOW_TEXT
 
-SESSION_BG=color15
-SESSION_TEXT=color16
-PREFIX_BG=color1
-PREFIX_TEXT=color15
+SESSION_BG=white
+SESSION_TEXT=black
+PREFIX_BG=red
+PREFIX_TEXT=white
 
-ZOOMED_BG=color1
-ZOOMED_TEXT=color15
+ZOOMED_BG=green
+ZOOMED_TEXT=white
+
+ACTIVE_PANE_BORDER=$ACTIVE_WINDOW
+INACTIVE_PANE_BORDER=$INACTIVE_WINDOW
 
 
 # Set shapes
 ICON=♣
 ZOOMED=ﬕ
+
+MARKED=✻
+ACTIVITY=
 
 ACTIVE_LEFT_SEP=
 ACTIVE_RIGHT_SEP=
@@ -45,8 +48,8 @@ set -g status-style bg=$STATUS_BG
 set -g status-left "#[bg=$SESSION_BG]#[fg=$SESSION_TEXT]"
 set -ga status-left "#{?client_prefix,#[bg=$PREFIX_BG]#[fg=$PREFIX_TEXT],}"
 #set -ga status-left " $ICON"
-set -ga status-left " [#S]"
-set -ga status-left "#{?window_zoomed_flag,#[bg=$ZOOMED_BG]#[fg=$ZOOMED_TEXT] $ZOOMED , }"
+set -ga status-left " [#S] "
+set -ga status-left "#{?window_zoomed_flag,#[bg=$ZOOMED_BG]#[fg=$ZOOMED_TEXT] $ZOOMED ,}"
 set -ga status-left "#[bg=$STATUS_BG] "
 set -g status-left-length 25
 
@@ -61,9 +64,12 @@ set -ga window-status-current-format "#{?window_marked_flag,✻ ,}"
 set -ga window-status-current-format "#[fg=$WINDOW_SEPARATOR]#[bg=$STATUS_BG]$ACTIVE_RIGHT_SEP"
 
 set -g window-status-format "#[fg=$WINDOW_SEPARATOR]#[bg=$STATUS_BG]$LEFT_SEP"
-set -ga window-status-format "#[fg=$INACTIVE_WINDOW_TEXT]#[bg=$INACTIVE_WINDOW] #I: #W "
+#set -ga window-status-format "#[fg=$INACTIVE_WINDOW_TEXT]#[bg=$INACTIVE_WINDOW] #I: #W "
+set -ga window-status-format "#[fg=$INACTIVE_WINDOW_TEXT]#[bg=$INACTIVE_WINDOW]"
+set -ga window-status-format " #{?window_activity_flag,$ACTIVITY,#I:} #W "
 set -ga window-status-format "#{?#{!=:#{window_panes},1},[#{window_panes}] ,}"
-set -ga window-status-format "#{?window_marked_flag,✻ ,}"
+set -ga window-status-format "#{?window_marked_flag,$MARKED ,}"
+#set -ga window-status-format "#{?window_activity_flag,$ACTIVITY ,}"
 set -ga window-status-format "#[fg=$WINDOW_SEPARATOR]#[bg=$STATUS_BG]$RIGHT_SEP"
 
 #Status right

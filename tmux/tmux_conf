@@ -27,12 +27,18 @@ set -g pane-border-format "#[bold] #P. (#{pane_current_command}) #{pane_current_
 set -g main-pane-height 50%
 set -g main-pane-width 50%
 
+# Window activity options
+set -g monitor-activity on
+set -g activity-action other
+set -g visual-activity on
+set -g window-status-activity-style ""
+
 # Loud or quiet?
-set -g visual-activity off
-set -g visual-bell off
-set -g visual-silence off
-set -g monitor-activity off
-set -g bell-action none
+#set -g visual-activity off
+#set -g visual-bell off
+#set -g visual-silence off
+#set -g monitor-activity off
+#set -g bell-action none
 
 ############# BINDINGS ##################
 # Reload config file with 'r'
