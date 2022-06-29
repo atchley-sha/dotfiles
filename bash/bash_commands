@@ -16,6 +16,8 @@ alias byuscssh='ssh satchley@ssh.rc.byu.edu'
 
 #refresh tmux
 alias tmuxref='pkill -SIGUSR1 tmux'
+#default to 'base' session
+alias tmx='tmux attach -t base || tmux new -s base'
 
 #create BEAM jar and move to convenient directory
 ## must be run from in beam directory and have BEAM and beam_scenarios in same directory
