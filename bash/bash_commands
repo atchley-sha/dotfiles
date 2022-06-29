@@ -37,6 +37,39 @@ function up()
 	cd $P
 }
 
+# Count for testing
+function count_seconds() {
+	for i in {1..$1}
+	do
+		echo "$i"
+		sleep 1
+	done
+}
+function count_minutes() {
+	for i in {1..$1}
+	do
+		echo "$i"
+		sleep 60
+	done
+}
+
+# Show 256 colors
+function 256_colors_fg() {
+	for i in {0..255} ; do
+		printf "\x1b[38;5;${i}m%3d " "${i}"
+		if (( $i == 15 )) || (( $i > 15 )) && (( ($i-15) % 12 == 0 )); then
+			echo;
+		fi
+	done
+}
+function 256_colors_bg() {
+	for i in {0..255}
+	do
+		printf '\e[48;5;%dm%3d ' $i $i; (((i+3) % 18)) || printf '\e[0m\n'
+	done
+	printf '\e[0m\n'
+}
+
 # Truecolor test
 function truecolortest() {
 	awk 'BEGIN{
