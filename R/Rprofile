@@ -1,4 +1,28 @@
-#library(targets)
-#library(bookdown)
-#library(tidyverse)
-#library(magrittr)
+# vim: ft=r
+
+# Default to no save
+q <- function() {quit(save="no")}
+# Function to save workspace on exit
+qsave <- function() { quit(save="yes") }
+
+# Use `.` for `.Last.value`
+makeActiveBinding(".", function(){.Last.value}, .GlobalEnv)
+
+# R interactive prompt
+options(prompt="\nR$ ")
+options(continue="> ")
+
+# No. of tibble rows to print by default (if the
+# tibble has more than `max` rows, print only the
+# first `min` rows)
+options(pillar.print_max = 30, pillar.print_min = 20)
+
+.First <- function(){
+ cat("\nWelcome to R!\n")
+}
+
+## Default repo
+local({r <- getOption("repos")
+       r["CRAN"] <- "https://cloud.r-project.org"
+       options(repos=r)
+})
