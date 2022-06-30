@@ -9,8 +9,8 @@ qsave <- function() { quit(save="yes") }
 makeActiveBinding(".", function(){.Last.value}, .GlobalEnv)
 
 # R interactive prompt
-options(prompt="\nR$ ")
-options(continue="> ")
+options(prompt="  R$ ")
+options(continue="     > ")
 
 # No. of tibble rows to print by default (if the
 # tibble has more than `max` rows, print only the
