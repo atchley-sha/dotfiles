@@ -10,7 +10,7 @@
 
 function prompt {
 	Write-Host ("[$(Get-Location)]") -NoNewLine -ForegroundColor Cyan
-	Write-Host ("`>") -NoNewLine -ForegroundColor White
+	Write-Host ("PS`>") -NoNewLine -ForegroundColor White
 	return " "
 }
 
