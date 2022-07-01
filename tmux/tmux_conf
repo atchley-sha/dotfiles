@@ -54,11 +54,17 @@ unbind %
 
 
 # Switch panes using Alt-arrow without prefix
-bind -n M-Left if-shell  "$is_vim" "send-keys M-Left" "select-pane -L"
-bind -n M-Right if-shell  "$is_vim" "send-keys M-Right" "select-pane -R"
-bind -n M-Up if-shell  "$is_vim" "send-keys M-Up" "select-pane -U"
-bind -n M-Down if-shell  "$is_vim" "send-keys M-Down" "select-pane -D"
-bind -n M-\ if-shell  "$is_vim"  "send-keys M-\\"  "select-pane -l"
+#bind -n C-Left if-shell  "[ #{pane_current_command} = vim ]" "send-keys C-Left" "select-pane -L"
+#bind -n C-Right if-shell  "[ #{pane_current_command} = vim ]" "send-keys C-Right" "select-pane -R"
+#bind -n C-Up if-shell  "[ #{pane_current_command} = vim ]" "send-keys C-Up" "select-pane -U"
+#bind -n C-Down if-shell  "[ #{pane_current_command} = vim ]" "send-keys C-Down" "select-pane -D"
+
+bind -n M-Left select-pane -L
+bind -n M-Right select-pane -R
+bind -n M-Up select-pane -U
+bind -n M-Down select-pane -D
+
+#bind -n C-Left send-keys C-Left
 
 # Switch active window with C-arrow without prefix
 bind -n C-Left select-window -t :-
