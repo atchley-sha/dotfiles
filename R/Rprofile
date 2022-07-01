@@ -18,7 +18,7 @@ options(continue="     > ")
 options(pillar.print_max = 50, pillar.print_min = 25)
 
 .First <- function(){
- cat("\nWelcome to R!\n")
+ cat("\nWelcome to R!\n\n")
 }
 
 ## Default repo
