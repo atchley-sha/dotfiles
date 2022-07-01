@@ -52,15 +52,17 @@ bind "_" split-window -fv -c "#{pane_current_path}"
 unbind '"'
 unbind %
 
-# Switch panes using Alt-arrow without prefix
-bind -n M-Left select-pane -L
-bind -n M-Right select-pane -R
-bind -n M-Up select-pane -U
-bind -n M-Down select-pane -D
 
-# Switch active window with Alt-<> without prefix
-bind -n M-< select-window -t :-
-bind -n M-> select-window -t :+
+# Switch panes using Alt-arrow without prefix
+bind -n M-Left if-shell  "$is_vim" "send-keys M-Left" "select-pane -L"
+bind -n M-Right if-shell  "$is_vim" "send-keys M-Right" "select-pane -R"
+bind -n M-Up if-shell  "$is_vim" "send-keys M-Up" "select-pane -U"
+bind -n M-Down if-shell  "$is_vim" "send-keys M-Down" "select-pane -D"
+bind -n M-\ if-shell  "$is_vim"  "send-keys M-\\"  "select-pane -l"
+
+# Switch active window with C-arrow without prefix
+bind -n C-Left select-window -t :-
+bind -n C-Right select-window -t :+
 
 # Move to marked pane
 bind \` switch-client -t'{marked}'
