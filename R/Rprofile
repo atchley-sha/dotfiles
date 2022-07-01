@@ -15,7 +15,7 @@ options(continue="     > ")
 # No. of tibble rows to print by default (if the
 # tibble has more than `max` rows, print only the
 # first `min` rows)
-options(pillar.print_max = 30, pillar.print_min = 20)
+options(pillar.print_max = 50, pillar.print_min = 25)
 
 .First <- function(){
  cat("\nWelcome to R!\n")
