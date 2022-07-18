@@ -8,8 +8,12 @@ alias showpath='echo $PATH | tr : "\n"'
 # ls aliases
 alias ls='ls --color=always'
 alias ll='ls -oh'
-alias la='ll -A'
-alias lt='ll -t'
+alias la='ls -Aoh'
+alias lt='ls -toh'
+
+# du aliases
+alias dul='du -sh *'
+alias dua='du -hs .[^.]* *'
 
 # Alias to ssh into byu supercomputer
 alias byuscssh='ssh satchley@ssh.rc.byu.edu'
@@ -71,7 +75,7 @@ function 256_colors_bg() {
 }
 
 # Truecolor test
-function truecolortest() {
+function truecolor_test() {
 	awk 'BEGIN{
 	s="/\\/\\/\\/\\/\\"; s=s s s s s s s s;
 	for (colnum = 0; colnum<77; colnum++) {
